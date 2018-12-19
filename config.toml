@@ -1,4 +1,4 @@
-baseurl                 = "https://sandeshbhusal.github.io/hugo/"               # Your domain name. Must end with "/"
+baseurl                 = "https://sandeshbhusal.github.io/blog/"               # Your domain name. Must end with "/"
 publishDir				= "docs"
 languageCode            = "en-us"
 defaultContentLanguage  = "en"
@@ -28,9 +28,9 @@ pygmentsCodefences      = true
     primaryImage        = "tn.png"                     # Image that shows on Twitter cards and OpenGraph links
 
 [[params.mainMenu]]
-    link = "/hugo/posts"
+    link = "/blog/posts"
     text = "posts"
 
 [[params.mainMenu]]
-    link = "/hugo/about"
+    link = "/blog/about"
     text = "who is this sandesh guy anyways?"
