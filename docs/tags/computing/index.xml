@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computing on Sandesh Bhusal&#39;s Blog</title>
+    <link>https://sandeshbhusal.github.io/blog/tags/computing/</link>
+    <description>Recent content in Computing on Sandesh Bhusal&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Dec 2018 12:14:36 +0545</lastBuildDate>
+    
+	<atom:link href="https://sandeshbhusal.github.io/blog/tags/computing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bloom Filters</title>
+      <link>https://sandeshbhusal.github.io/blog/posts/bloom-filter/</link>
+      <pubDate>Wed, 19 Dec 2018 12:14:36 +0545</pubDate>
+      
+      <guid>https://sandeshbhusal.github.io/blog/posts/bloom-filter/</guid>
+      <description>Bloom Filters Bloom Filters are god&amp;rsquo;s way of satisfying false negatives.
+ERM.. WHAT?!
+Yup. Bloom filters are probabilistic data structures, that are used to find out if a certain given element lies within a set or not. Or more precisely, to find out if a particular given element definitely DOES NOT lie within a given set. This characteristic of bloom filters is exploited in various places, including implementing web crawlers.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,6 +2,7 @@
 title: "Implementing Dictionary using a Trie"
 date: 2018-12-19T08:11:50+05:45
 draft: false
+showDate: true
 description: "A simple blog post explaining stuff."
 tags: ['Data Structures']
 ---

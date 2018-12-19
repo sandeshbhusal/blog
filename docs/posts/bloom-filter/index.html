@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="Sandesh Bhusal&#39;s Blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="https://sandeshbhusal.github.io/blog/">
+
+<meta name="twitter:image" content="https://sandeshbhusal.github.io/blog/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sandesh Bhusal&#39;s Blog">
+<meta name="twitter:description" property="og:description" itemprop="description" content="Sandesh Bhusal&#39;s Blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="https://sandeshbhusal.github.io/blog/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="https://sandeshbhusal.github.io/blog/tn.png">
+
+<link rel="shortcut icon" href="https://sandeshbhusal.github.io/blog/sam.ico" id="favicon">
+<link rel="stylesheet" href="https://sandeshbhusal.github.io/blog/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Bloom Filters
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Bloom Filters</div>
+
+        
+<div class="section" id="content">
+    Wed Dec 19, 2018 &#183; 458 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="https://sandeshbhusal.github.io/blog/tags/data-structures">
+                Data Structures
+            </a>
+        </span>
+        
+        <span class="tag">
+            <a href="https://sandeshbhusal.github.io/blog/tags/computing">
+                computing
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    
+
+<h2 id="bloom-filters">Bloom Filters</h2>
+
+<p>Bloom Filters are god&rsquo;s way of satisfying false negatives.</p>
+
+<p>ERM.. WHAT?!</p>
+
+<p>Yup. Bloom filters are probabilistic data structures, that are used to find out if a certain given element lies within a set or not. Or more precisely, to find out if a particular given element definitely DOES NOT lie within a given set. This characteristic of bloom filters is exploited in various places, including implementing web crawlers. This article is meant to be an introduction to Bloom Filters. As I am kinda slow, I implore you to try out the math yourself. With that being said, let&rsquo;s begin!</p>
+
+<p>As mentioned earlier, Bloom Filters (we will refer to it as BF from now onwards) is a probabilistic data structure, which means that you cannot be sure that it will be a hundred percent accurate when you implement it to do stuff. As BFs are primarily used to find set associations for elements, you might ask yourself: Why should I use it if it is inaccurate? The answer is this: BFs are probabilistic, and can give a rough estimate if any given element lies in a set. But it can give DEFINITE answers when it comes to giving negative answers, i.e. it can accurately predict if the element is not within a given set. &ldquo;Hold up!&rdquo;, you must be thinking. &ldquo;For any event happening, if the probability is <em>p(x)</em>, then the probability of it not happening will be <em>1-p(x)</em> ! Thus, how can BFs give accurate measures?!&rdquo; Your question will be answered shortly.</p>
+
+<h4 id="structure">Structure:</h4>
+
+<p>Bloom filters are essentialy hashtables on steroids. Well, not really. Let&rsquo;s analyze the structure.</p>
+
+<p>Let us consider a table with indices of size 10 as follows:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+</tr>
+
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+<p>This will be the bucket for our hash output storage. We require at least two hash functions for the BF to work. Again, BF means Bloom Filter. Let us take any two hashing functions, and output their modulo. For an example, we can take a sum hash and a multiply hash function (in real life these functions are not used).</p>
+
+<p>Let, for a string &rsquo;s&rsquo;, the sum function is defined as:</p>
+
+<p>Sum(s) = s[0] + s[1] + s[2] + &hellip; + s[n]; n&lt;length(s)</p>
+
+<p>where s[i] represents the ith character in the string.</p>
+
+<p>Similarly, the multiplication function will be defined by:</p>
+
+<p>Mul(s) = s[0] x s[1] x s[2] x &hellip; x s[n]; n&lt;length(s)</p>
+
+<p>Now that we have assigned two of our hash functions, we can proceed to fill the bloom table. For that, we need an algorithm.</p>
+
+<p>Let, s be the input string. Then, we fill up positions</p>
+
+<p><strong>Sum(s) MOD 10 and Mul(s) MOD 10</strong></p>
+
+<p>in the table.</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/blog/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/blog/posts">
+                posts
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/blog/about">
+                who is this sandesh guy anyways?
+            </a>
+        
+    
+    &#183; 
+    <a href="https://sandeshbhusal.github.io/blog/">
+        home page
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">&copy; Sandesh Bhusal</div>
+    </div>
+</body>
+
+</html>
