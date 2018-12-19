@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Sandesh Bhusal&#39;s Blog</title>
-    <link>https://sandeshbhusal.github.io/hugo/posts/</link>
+    <link>https://sandeshbhusal.github.io/blog/posts/</link>
     <description>Recent content in Posts on Sandesh Bhusal&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Dec 2018 08:11:50 +0545</lastBuildDate>
     
-	<atom:link href="https://sandeshbhusal.github.io/hugo/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sandeshbhusal.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Implementing Dictionary using a Trie</title>
-      <link>https://sandeshbhusal.github.io/hugo/posts/tries-in-c&#43;&#43;/</link>
+      <link>https://sandeshbhusal.github.io/blog/posts/tries-in-c&#43;&#43;/</link>
       <pubDate>Wed, 19 Dec 2018 08:11:50 +0545</pubDate>
       
-      <guid>https://sandeshbhusal.github.io/hugo/posts/tries-in-c&#43;&#43;/</guid>
+      <guid>https://sandeshbhusal.github.io/blog/posts/tries-in-c&#43;&#43;/</guid>
       <description>Implementation of Tries in C++ From Wikipedia:
 In computer science, a Trie is a type of search tree used to represent the retrieval of data (thus the name Trie). It&amp;rsquo;s an ordered data structure that is based on the prefix of a string.
 Thus, basically, a trie is a search tree that contains the information about a particular string. However, a trie can contain information also about the prefix and suffix informations on the string.</description>
