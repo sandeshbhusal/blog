@@ -1,4 +1,5 @@
 baseurl                 = "localhost/"               # Your domain name. Must end with "/"
+publishDir				= "docs"
 languageCode            = "en-us"
 defaultContentLanguage  = "en"
 isMultilingual          = false
