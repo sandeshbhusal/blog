@@ -17,9 +17,8 @@
       <pubDate>Wed, 19 Dec 2018 12:14:36 +0545</pubDate>
       
       <guid>https://sandeshbhusal.github.io/blog/posts/bloom-filter/</guid>
-      <description>Bloom Filters Bloom Filters are god&amp;rsquo;s way of satisfying false negatives.
-ERM.. WHAT?!
-Yup. Bloom filters are probabilistic data structures, that are used to find out if a certain given element lies within a set or not. Or more precisely, to find out if a particular given element definitely DOES NOT lie within a given set. This characteristic of bloom filters is exploited in various places, including implementing web crawlers.</description>
+      <description>Bloom Filters are a great way of satisfying negatives.
+Bloom filters are probabilistic data structures, that are used to find out if a certain given element lies within a set or not. Or more precisely, to find out if a particular given element definitely DOES NOT lie within a given set. This characteristic of bloom filters is exploited in various places, primarily, when implementing web crawlers. This article is meant to be an introduction to Bloom Filters.</description>
     </item>
     
   </channel>
