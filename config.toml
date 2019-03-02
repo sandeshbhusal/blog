@@ -23,6 +23,7 @@ pygmentsCodefences      = true
     footerText          = "&copy; Sandesh Bhusal "
     defaultTheme        = "light"
     showReadingTime     = true
+    showMenuItems       = 1
 
 [languages]
     [languages.en]
@@ -35,7 +36,11 @@ pygmentsCodefences      = true
 
         [languages.en.params.logo]
         logoText = "/home/sandesh/blog/"
-
+        [languages.en.menu]
+            [[languages.en.menu.main]]
+            identifier = "about"
+            name = "About"
+            url = "/about"
 
 # Metadata
     description         = "Sandesh Bhusal's Blog"            # Max 160 characters show in search results
