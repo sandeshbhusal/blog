@@ -4,7 +4,7 @@ languageCode            = "en-us"
 defaultContentLanguage  = "en"
 isMultilingual          = false
 title                   = "Sandesh Bhusal's Blog"
-theme                   = "sam"
+theme                   = "hello-friend"
 pygmentsStyle           = "monokai"                     # https://help.farbox.com/pygments.html
 pygmentsCodefences      = true
 # googleAnalytics         = ""             # Tracking code, eg. "UA-111111111-1"
@@ -21,6 +21,21 @@ pygmentsCodefences      = true
     smallImagesSubfolder = "small/"                      # The subfolder for the small versions of the images under the gallery (with trailing slash)
                                                          # For each image the small version has to have the same filename as the big version.
     footerText          = "&copy; Sandesh Bhusal "
+    defaultTheme        = "light"
+    showReadingTime     = true
+
+[languages]
+    [languages.en]
+        title = "Sandesh Bhusal's blog"
+        subtitle = "Still searching..."
+        keywords = "algorithms, data structures, computer science, spirituality"
+        writtenBy = "Written By:"
+        readMore  = "Read More"
+        minuteReadingTime = " minutes to read."
+
+        [languages.en.params.logo]
+        logoText = "/home/sandesh/blog/"
+
 
 # Metadata
     description         = "Sandesh Bhusal's Blog"            # Max 160 characters show in search results
