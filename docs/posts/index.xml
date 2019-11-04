@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Sandesh Bhusal&#39;s blog</title>
@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Sandesh Bhusal&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Dec 2018 07:27:44 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 04 Mar 2019 07:02:54 +0545</lastBuildDate>
     
 	<atom:link href="https://sandeshbhusal.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Computer Graphics :: Project Overview</title>
+      <link>https://sandeshbhusal.github.io/blog/posts/computer-graphics-project-overview/</link>
+      <pubDate>Mon, 04 Mar 2019 07:02:54 +0545</pubDate>
+      
+      <guid>https://sandeshbhusal.github.io/blog/posts/computer-graphics-project-overview/</guid>
+      <description>IOE Pulchowk Campus assigns a project each year, for the practical fulfillment in Computer Graphics course allocated in the first semester of third year (fifth semester). It is for the same, that we decided to create a 3D rendering engine depicting a human face. The engine would be written in C++ and backed by OpenGL. However, none of the functions within OpenGL could be used, as the specification of the project clearly stated that we were to use only the 2D point plotting function available as the OpenGL standard library.</description>
+    </item>
     
     <item>
       <title>Lru Cache :: Data Structure</title>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Sandesh Bhusal&#39;s blog</title>
@@ -12,20 +12,11 @@
     
     
     <item>
-      <title>Blog</title>
+      <title>blog</title>
       <link>https://sandeshbhusal.github.io/blog/tags/blog/</link>
       <pubDate>Sat, 29 Dec 2018 07:27:44 +0545</pubDate>
       
       <guid>https://sandeshbhusal.github.io/blog/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Computing</title>
-      <link>https://sandeshbhusal.github.io/blog/tags/computing/</link>
-      <pubDate>Wed, 19 Dec 2018 12:14:36 +0545</pubDate>
-      
-      <guid>https://sandeshbhusal.github.io/blog/tags/computing/</guid>
       <description></description>
     </item>
     
@@ -35,6 +26,15 @@
       <pubDate>Sat, 29 Dec 2018 07:27:44 +0545</pubDate>
       
       <guid>https://sandeshbhusal.github.io/blog/tags/data-structures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computing</title>
+      <link>https://sandeshbhusal.github.io/blog/tags/computing/</link>
+      <pubDate>Wed, 19 Dec 2018 12:14:36 +0545</pubDate>
+      
+      <guid>https://sandeshbhusal.github.io/blog/tags/computing/</guid>
       <description></description>
     </item>
     

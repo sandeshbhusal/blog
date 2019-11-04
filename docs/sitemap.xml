@@ -1,6 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://sandeshbhusal.github.io/blog/posts/computer-graphics-project-overview/</loc>
+    <lastmod>2019-03-04T07:02:54+05:45</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sandeshbhusal.github.io/blog/posts/</loc>
+    <lastmod>2019-03-04T07:02:54+05:45</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sandeshbhusal.github.io/blog/</loc>
+    <lastmod>2019-03-04T07:02:54+05:45</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sandeshbhusal.github.io/blog/tags/blog/</loc>
+    <lastmod>2018-12-29T07:27:44+05:45</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sandeshbhusal.github.io/blog/tags/data-structures/</loc>
+    <lastmod>2018-12-29T07:27:44+05:45</lastmod>
+  </url>
   
   <url>
     <loc>https://sandeshbhusal.github.io/blog/posts/lru_cache/</loc>
@@ -8,7 +33,27 @@
   </url>
   
   <url>
+    <loc>https://sandeshbhusal.github.io/blog/tags/</loc>
+    <lastmod>2018-12-29T07:27:44+05:45</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sandeshbhusal.github.io/blog/about/</loc>
+    <lastmod>2018-12-19T12:14:36+05:45</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sandeshbhusal.github.io/blog/posts/bloom-filter/</loc>
+    <lastmod>2018-12-19T12:14:36+05:45</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sandeshbhusal.github.io/blog/projects/</loc>
+    <lastmod>2018-12-19T12:14:36+05:45</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sandeshbhusal.github.io/blog/tags/computing/</loc>
     <lastmod>2018-12-19T12:14:36+05:45</lastmod>
   </url>
   
@@ -18,48 +63,12 @@
   </url>
   
   <url>
-    <loc>https://sandeshbhusal.github.io/blog/about/</loc>
-  </url>
-  
-  <url>
-    <loc>https://sandeshbhusal.github.io/blog/tags/blog/</loc>
-    <lastmod>2018-12-29T07:27:44+05:45</lastmod>
+    <loc>https://sandeshbhusal.github.io/blog/resume/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://sandeshbhusal.github.io/blog/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sandeshbhusal.github.io/blog/tags/computing/</loc>
-    <lastmod>2018-12-19T12:14:36+05:45</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sandeshbhusal.github.io/blog/tags/data-structures/</loc>
-    <lastmod>2018-12-29T07:27:44+05:45</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sandeshbhusal.github.io/blog/posts/</loc>
-    <lastmod>2018-12-29T07:27:44+05:45</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sandeshbhusal.github.io/blog/</loc>
-    <lastmod>2018-12-29T07:27:44+05:45</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://sandeshbhusal.github.io/blog/tags/</loc>
-    <lastmod>2018-12-29T07:27:44+05:45</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>

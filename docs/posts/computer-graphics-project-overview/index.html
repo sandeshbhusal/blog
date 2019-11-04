@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Computer Graphics :: Project Overview - Sandesh Bhusal&#39;s blog</title><link rel="icon" type="image/png" href=sam.ico /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Computer Graphics :: Project Overview" />
+<meta property="og:description" content="IOE Pulchowk Campus assigns a project each year, for the practical fulfillment in Computer Graphics course allocated in the first semester of third year (fifth semester). It is for the same, that we decided to create a 3D rendering engine depicting a human face. The engine would be written in C&#43;&#43; and backed by OpenGL. However, none of the functions within OpenGL could be used, as the specification of the project clearly stated that we were to use only the 2D point plotting function available as the OpenGL standard library." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sandeshbhusal.github.io/blog/posts/computer-graphics-project-overview/" />
+<meta property="article:published_time" content="2019-03-04T07:02:54+05:45" />
+<meta property="article:modified_time" content="2019-03-04T07:02:54+05:45" /><meta property="og:site_name" content="Sandesh Bhusal&#39;s blog" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Computer Graphics :: Project Overview"/>
+<meta name="twitter:description" content="IOE Pulchowk Campus assigns a project each year, for the practical fulfillment in Computer Graphics course allocated in the first semester of third year (fifth semester). It is for the same, that we decided to create a 3D rendering engine depicting a human face. The engine would be written in C&#43;&#43; and backed by OpenGL. However, none of the functions within OpenGL could be used, as the specification of the project clearly stated that we were to use only the 2D point plotting function available as the OpenGL standard library."/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="https://sandeshbhusal.github.io/blog/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://sandeshbhusal.github.io/blog/css/main.css" />
+
+	
+	<script src="https://sandeshbhusal.github.io/blog/js/main.js"></script>
+</head>
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<h1 class="site-title"><a href="/">Sandesh Bhusal&#39;s blog</a></h1>
+	<div class="site-description"><h2>Takes on code, life and philosophy</h2><nav class="nav social">
+			<ul class="flat"></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/blog/">Blog</a>
+			</li>
+			
+			<li>
+				<a href="/blog/projects">Projects</a>
+			</li>
+			
+			<li>
+				<a href="/blog/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/blog/resume">Resume</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Computer Graphics :: Project Overview</h1>
+			<div class="meta">Posted at &mdash; Mar 4, 2019</div>
+		</div>
+
+		<div class="markdown">
+			
+
+<p>IOE Pulchowk Campus assigns a project each year, for the practical fulfillment in Computer Graphics course allocated in the first semester of third year (fifth semester). It is for the same, that we decided to create a 3D rendering engine depicting a human face. The engine would be written in C++ and backed by OpenGL. However, none of the functions within OpenGL could be used, as the specification of the project clearly stated that we were to use only the 2D point plotting function available as the OpenGL standard library. None of the Vertex Buffer thingies exposed by OpenGL could be used, and each pixel had to be calculated, transformed and plotted individually. Not only this, the projection for the final image had to be calculated and the .obj file used for the model had to be read seperately. It all sounds <em>tedious</em> and believe me, it is. But in the end, the exhilarating feel of doing something on your own using simple primitives such as a point plotting function overcomes everything. Mind you, <strong>everything</strong>.</p>
+
+<p>The first pain for me personally was to find a suitable resource to learn, as deadline for the project was just days away, and I was not proficient in either OpenGL or Computer Graphics Algorithms for that matter. I went on a frantic search to find learning resources. I will list out some of them at the end of the post. This post has been broken down into a list of items, that a programmer needs to oversee while completing the Computer Graphics Project for fulfillment of practical requirement in the fifth semester in IOE Pulchowk Campus. Let&rsquo;s begin!</p>
+
+<h3 id="1-finding-writing-a-suitable-object-file-loader">1. Finding / Writing a suitable Object file loader.</h3>
+
+<p>This was one of the major pains for me. An object file, denoted by extension .obj is a text file that gives information about the points, textures and normals in a 3D object created in a modeling software like Blender. However, I strongly recommend you to pull some 3D models from the internet, which can be found royalty free and free of cost at some sites like <a href="http://www.turbosquid.com">turbosquid</a> or <a href="https://www.free3d.com">Free3D</a>. Making these models on your own is too much of a hassle and simply not worth it if you are trying to complete the project quickly. However, you might be scored based on if you have made the 3D model yourself or not. Confirm this with your teacher first.</p>
+
+<p>The next part is the reader for the obj file. You can find many implementations for the same, or even use libraries like <strong>assimp</strong> or use header-only loaders available on github. (As a matter of fact, I have my own loader inside the github link posted below this page). BUT. I <strong>strongly</strong> recommend you to write your own. This will be a major learning part and to be honest, it is quite easy. It&rsquo;s as  easy as this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">ifstream infile;
+infile.open(<span style="color:#e6db74">&#34;objmodel.obj&#34;</span>, std<span style="color:#f92672">::</span>ios<span style="color:#f92672">::</span>in);
+std<span style="color:#f92672">::</span>string line;
+<span style="color:#66d9ef">while</span>(getline(infile, line)){
+    <span style="color:#66d9ef">if</span>(line[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;v&#39;</span> <span style="color:#f92672">&amp;&amp;</span> line[<span style="color:#ae81ff">1</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;n&#39;</span>){
+        <span style="color:#75715e">// This is a vertex normal.
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// Denoted in file as v &lt;float&gt; &lt;float&gt; &lt;float&gt;
+</span><span style="color:#75715e"></span>        std<span style="color:#f92672">::</span>stringstream s;
+        s <span style="color:#f92672">&lt;&lt;</span> line;
+        <span style="color:#66d9ef">char</span> ch;
+        <span style="color:#66d9ef">float</span> x, y, z;
+        s <span style="color:#f92672">&gt;&gt;</span> ch <span style="color:#f92672">&gt;&gt;</span> x <span style="color:#f92672">&gt;&gt;</span> y <span style="color:#f92672">&gt;&gt;</span> z;
+    }
+}
+</code></pre></div>
+<p>And you have the X Y Z components of a vertex normal! Simple as that! You might be wondering, there is not much of a learning curve to it. But trust me, writing your own loader gives you much more power over the data structures that are going to be used and you will rarely get confused about what to use in the later segments.  Another most important thing to remember is that, <strong>always</strong> triangulate your faces before exporting obj files. GPUs are designed to work on triangles, not quads. And doing this will reduce your pain of writing code for the face if it contains 4 or more vertices. Phew!</p>
+
+<h3 id="2-writing-code-dirty-nitty-gritty-code">2. Writing Code. Dirty nitty gritty code.</h3>
+
+<p>Now that we have our obj file loaded and sitting nicely in one of our data structures, perhaps a <code>vector&lt;struct facevertices&gt; face</code> , or a <code>vector&lt;struct vertex&gt; vertices</code>, we can actually go ahead and contribute more to our project. What does this entail? Yes. Writing code. So go ahead and intitialize your OpenGL project. Draw a triangle, draw a cube and by then you are ready to go. While choosing a OpenGL library, always keep in mind to choose the one that gives you full control while also containing helpful functions to guide you along the way. Libraries rarely do much for the project, as all the calculations need to be carried out on your own. So, it is adequate to choose a library that gives you a window manager, and allows you to use openGL functions. For this purpose, I chose <strong>glut</strong>. In the landscape of myriad OpenGL libraries it is quite easy to get lost. Always remember the KISS principle ;) . My initialization function looked like the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">glutInit(<span style="color:#f92672">&amp;</span>argc, argv);
+glutInitDisplayMode(GLUT_SINGLE <span style="color:#f92672">|</span> GLUT_RGBA);
+glutInitWindowSize(<span style="color:#ae81ff">600</span>, <span style="color:#ae81ff">600</span>);
+glutCreateWindow(<span style="color:#e6db74">&#34;Learning Opengl&#34;</span>);
+glutDisplayFunc(render);
+glutReshapeFunc(reshape);
+glutMouseFunc(mouse);
+glutKeyboardFunc(keyboard);
+glutIdleFunc(idle);
+
+config<span style="color:#f92672">::</span>shaderFunction <span style="color:#f92672">=</span> experimentalShader;
+glutMainLoop();
+</code></pre></div>
+<p>You can tweak this to your own liking. And choosing libraries is rarely an important part for this project. Libraries will do nothing for you. You can even use matplotlib and whatnot, as this project requires you to just plot points. So don&rsquo;t worry too much about the libraries you are going to use. ( Fun fact: We had even done a project using linux framebuffers, that could write pixels directly to the screen. So OpenGL or no OpenGL, it really is not going to matter as long as you need to implement all the algorithms yourself. )</p>
+
+<h4 id="2-1-pain-1-writing-the-object-loader">2.1 Pain #1: Writing the Object Loader</h4>
+
+<p>I have already discussed on this topic in the above section, so not going to delve too deep here.</p>
+
+<h4 id="2-2-pain-2-perspectives">2.2 Pain #2: Perspectives:</h4>
+
+<p>You have the vertices in a 3D coordinate system. Now, you need to convert those 3D vertices to 2D coordinates to be read on the screen. One simple way is to remove the Z part of the coordinate and plot whatever is in the file using something like <code>glVertex3f(x, y, 0)</code> or if using a 2D coordinate system explicitly, <code>glVertex2f(x, y)</code>. Choosing either of them is a matter of choice.</p>
+
+<p>However, your course requirement does not recommend you to do this. You NEED to demonstrate how different kinds of projections work. For an example, you can use Perspective projection, Isometric projection or Parallel projection. You have already studied these projections in the second part of your Engineering Drawing course. ( Yeah right. Here&rsquo;s where it is going to be used, if you were ever confused ). But do not panic. You won&rsquo;t require a drafter. Just some basic knowledge about these projections. I recommend Perspective projection as it is quite easy to implement and I did the same :P. You can use any other form of projection.</p>
+
+<p>For converting the 3D coordinates to 2D coordinates on a projection plane, follow the following steps:</p>
+
+<ol>
+<li>Find the coordinate to be plotted (x, y, z).</li>
+<li>Choose a projection plane, e.g. z = 3, in the direction of +ve viewing axis, i.e. z axis. (You can use any axis. But the general choice is Z axis).</li>
+<li>Choose a point for eye, let (a, b, c).</li>
+<li>Find lines from point (x, y, z) to (a, b, c) and find the intersection of those lines with the projection plane (z = 3). This is general maths and if you need help here, I seriously recommend you to stop reading this post and start reading high school mathematics. Sarcasm intended.</li>
+<li>Plot the points on the device at the specified plane.</li>
+<li>For ease of use, you can shift the plane from z=3 to z=0. This means that you can simply use (x, y, 0) as the intersection coordinates.</li>
+</ol>
+
+<p>You might even be wondering. Why not simply choose z=0 as the perspective plane as opposed to choosing a perspective plane? The answer is zooming. Most of you will, at the end of the project, show scaling as zooming operation to the teacher, and they might even buy it. But they are completely different things. Zooming means coming closer to the object, which is accomplished by moving your eye closer to it. In case you chose to use z=0 as the projection plane, your vertices will stay stationary and will not give the impression of zooming, and gail bhais paani mein.</p>
+
+<h4 id="2-3-pain-3-plotting-the-faces">2.3 Pain #3: Plotting the faces</h4>
+
+<p>Now here&rsquo;s where your project is going to get interesting. You have a triangle. You have the vertices, and normals at those vertices. You also have the intensities at those vertices and you can plot those vertices onto the screen using. If you have followed this blog well upto this point, you can see something like this on the screen ( a screenshot from our project ):</p>
+
+<p><img src="https://i.imgur.com/tp6A79S.png" alt="alt text" title="Plot of Vertices" /></p>
+
+<p>Okay. Now you have the vertices. Now you need to plot a triangle between those vertices. (You can use either Gouraud shading or Phong shading to calculate illuminations at points). How would you go about doing this? You can use <strong>linear Interpolation</strong> for this same purpose. Linear interpolation has already been discussed in your course, and you can get more resources (including the source code) somewhere in a tutorial around <a href="http://www-users.mat.uni.torun.pl/~wrona/3d_tutor/tri_fillers.html">here</a>. I highly recommend you to study the code first than copy-pasting it into your project -_-</p>
+
+<p>Now that you have drawn a triangle, and interpolated the values at each of the vertices, you can go ahead and implement rotations, scaling and illumination models. These are basic things and you should not be consulting a blog for this purpose.</p>
+
+<h3 id="3-bonus">3. Bonus</h3>
+
+<p>An interesting thing I came across while completing this project was the use of Barycentric Coordinate system for the interpolation purpose ( I used barycentric interpolation in my project as opposed to linear interpolation, and it gave really good results. ) I will include the links for studying the same below</p>
+
+<h3 id="4-promised-links">4. Promised Links:</h3>
+
+<ol>
+<li><a href="https://www.learnopengl.com">Learning OpenGL</a></li>
+<li><a href="https://docs.gl">OpenGL Documentation (important)</a></li>
+<li>Incoming more&hellip;</li>
+</ol>
+
+<h3 id="5-project-requirements">5. Project Requirements:</h3>
+
+<p>Your final project should contain the following things:</p>
+
+<ol>
+<li>3D model created using Blender or downloaded from the internet (duh!)</li>
+<li>Obj file reader (code)</li>
+<li>Projection model (perspective / parallel / isometric)</li>
+<li>Triangle Interpolation (linear interpolation / barycentric interpolation)</li>
+<li>Shading model (Phong / Gaoraud shading model)</li>
+<li>Lighting ( Specular + Diffused + Ambient )</li>
+<li>Visible Surface Detection ( Z Buffer / Scan Line method )</li>
+<li>3D tranformations (Rotation, Translation, Scaling)</li>
+<li>Optional:
+
+<ol>
+<li>Texture maps and painting</li>
+</ol></li>
+</ol>
+
+<p>Remember that you are required to show the model of 1 3D object. You can choose more than 1. (We showed 3 models) However, this probably won&rsquo;t make a difference in your scores.</p>
+
+<h3 id="6-conclusion">6. Conclusion</h3>
+
+<p>Project is completed. Phew! Now all that remains is the presentation and report. ( I will include a sample report below ) Remember to ask your teacher how the presentation is going to be conducted always remember, the teacher has every right to ask you questions about your project, including how your code works and theory portions. Enjoy!</p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+			
+		</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = '';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+		Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+
+
+</body>
+</html>

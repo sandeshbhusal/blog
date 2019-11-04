@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sandesh Bhusal&#39;s blog</title>
@@ -6,10 +6,19 @@
     <description>Recent content on Sandesh Bhusal&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 29 Dec 2018 07:27:44 +0545</lastBuildDate>
+    <lastBuildDate>Mon, 04 Mar 2019 07:02:54 +0545</lastBuildDate>
     
 	<atom:link href="https://sandeshbhusal.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Computer Graphics :: Project Overview</title>
+      <link>https://sandeshbhusal.github.io/blog/posts/computer-graphics-project-overview/</link>
+      <pubDate>Mon, 04 Mar 2019 07:02:54 +0545</pubDate>
+      
+      <guid>https://sandeshbhusal.github.io/blog/posts/computer-graphics-project-overview/</guid>
+      <description>IOE Pulchowk Campus assigns a project each year, for the practical fulfillment in Computer Graphics course allocated in the first semester of third year (fifth semester). It is for the same, that we decided to create a 3D rendering engine depicting a human face. The engine would be written in C++ and backed by OpenGL. However, none of the functions within OpenGL could be used, as the specification of the project clearly stated that we were to use only the 2D point plotting function available as the OpenGL standard library.</description>
+    </item>
     
     <item>
       <title>Lru Cache :: Data Structure</title>
@@ -22,6 +31,16 @@ If data within a small range of memory addresses is to be frequently brought int
     </item>
     
     <item>
+      <title>About me</title>
+      <link>https://sandeshbhusal.github.io/blog/about/</link>
+      <pubDate>Wed, 19 Dec 2018 12:14:36 +0545</pubDate>
+      
+      <guid>https://sandeshbhusal.github.io/blog/about/</guid>
+      <description>Hey! I am Sandesh Bhusal. I am an undergraduate student at IOE Pulchowk Campus studying in the Department of Electronics and Computer Engineering. My field of study is Computer Engineering and I am currently an intern at LICT, IOE Pulchowk Campus. I would love to hear from you! Here&amp;rsquo;s how you can reach out to me:
+ Sandesh Bhusal on Github Me on facebook This is my maintained blog  That is about it for now.</description>
+    </item>
+    
+    <item>
       <title>Bloom Filters</title>
       <link>https://sandeshbhusal.github.io/blog/posts/bloom-filter/</link>
       <pubDate>Wed, 19 Dec 2018 12:14:36 +0545</pubDate>
@@ -29,6 +48,16 @@ If data within a small range of memory addresses is to be frequently brought int
       <guid>https://sandeshbhusal.github.io/blog/posts/bloom-filter/</guid>
       <description>Bloom Filters are a great way of satisfying negatives.
 Bloom filters are probabilistic data structures, that are used to find out if a certain given element lies within a set or not. Or more precisely, to find out if a particular given element definitely DOES NOT lie within a given set. This characteristic of bloom filters is exploited in various places, primarily, when implementing web crawlers. This article is meant to be an introduction to Bloom Filters.</description>
+    </item>
+    
+    <item>
+      <title>Computers are cool</title>
+      <link>https://sandeshbhusal.github.io/blog/projects/</link>
+      <pubDate>Wed, 19 Dec 2018 12:14:36 +0545</pubDate>
+      
+      <guid>https://sandeshbhusal.github.io/blog/projects/</guid>
+      <description>Hey! I am Sandesh Bhusal. I am an undergraduate student at IOE Pulchowk Campus studying in the Department of Electronics and Computer Engineering. My field of study is Computer Engineering and I am currently an intern at LICT, IOE Pulchowk Campus. I would love to hear from you! Here&amp;rsquo;s how you can reach out to me:
+ Sandesh Bhusal on Github Me on facebook This is my maintained blog  That is about it for now.</description>
     </item>
     
     <item>
@@ -44,11 +73,11 @@ Thus, basically, a trie is a search tree that contains the information about a p
     
     <item>
       <title></title>
-      <link>https://sandeshbhusal.github.io/blog/about/</link>
+      <link>https://sandeshbhusal.github.io/blog/resume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sandeshbhusal.github.io/blog/about/</guid>
-      <description>About Sandesh Bhusal Sandesh Bhusal is an undergrad student currently studying at IOE Pulchowk Campus. He likes to code in his spare time, and is aligned towards user experience design. Internal workings of machines give him goosebumps (quote. Sandesh Bhusal, circa 2018) and algorithms make him whistle. Give him a good algorithm for anything any day of the week, and he will take two weeks to understand it. He is kinda slow but a swell guy.</description>
+      <guid>https://sandeshbhusal.github.io/blog/resume/</guid>
+      <description></description>
     </item>
     
   </channel>
