@@ -1,5 +1,5 @@
 ---
-title: "About me"
+title: "Computers are cool"
 date: 2018-12-19T12:14:36+05:45
 disqus: false
 ---
